@@ -1,0 +1,103 @@
+/* ============================================================================
+   متغيرات التصميم — الألوان مستوحاة من شعار الحلواني (ذهبي دافئ)
+   لتغيير الهوية البصرية لاحقًا، عدّل القيم هنا فقط
+   ============================================================================ */
+:root {
+  /* --- ألوان الشعار --- */
+  --color-gold: #c49a3c;
+  --color-gold-dark: #9d7a26;
+  --color-gold-light: #e3c377;
+  --color-ink: #1d1a15;
+
+  /* ===================== الوضع النهاري ===================== */
+  --bg: #f7f5f0;             /* خلفية الصفحة */
+  --surface: #ffffff;         /* البطاقات */
+  --surface-2: #f1ede3;       /* طبقة ثانوية */
+  --surface-3: #e9e3d4;       /* طبقة ثالثة (رؤوس الجداول) */
+  --text: #211d17;
+  --text-muted: #6d6555;
+  --border: #e3dccb;
+  --border-strong: #d2c8ae;
+  --shadow: 0 1px 2px rgba(29, 26, 21, .05), 0 2px 8px rgba(29, 26, 21, .05);
+  --shadow-lg: 0 8px 28px rgba(29, 26, 21, .13);
+
+  /* --- ألوان دلالية للحالات (تُستخدم للحالة فقط) --- */
+  --ok: #17803d;             /* متوفر — أخضر مريح */
+  --ok-bg: #e7f4eb;
+  --ok-border: #b6dfc4;
+
+  --danger: #c0392b;          /* منتهي — أحمر واضح غير فاقع */
+  --danger-bg: #fbeae8;
+  --danger-border: #f0c4bf;
+
+  --warn: #b57614;            /* لاحقًا — ذهبي/برتقالي دافئ */
+  --warn-bg: #fcf1dc;
+  --warn-border: #eed7a8;
+
+  --pressure: #b3541e;        /* ضغط عالٍ — تحذيري */
+  --pressure-bg: #fbeadf;
+  --pressure-border: #f0cbb2;
+
+  --info: #1f6a8c;            /* معلوماتي — أزرق هادئ */
+  --info-bg: #e6f1f6;
+  --info-border: #b9d8e5;
+
+  --accent: var(--color-gold);
+  --accent-dark: var(--color-gold-dark);
+  --accent-soft: #f6eed9;
+  --accent-contrast: #ffffff;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-full: 999px;
+
+  --font-arabic: 'Cairo', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px;
+  --space-4: 16px; --space-5: 24px; --space-6: 32px; --space-7: 48px;
+
+  --header-height: 68px;
+  --transition: 160ms ease;
+}
+
+/* ===================== الوضع الليلي ===================== */
+/* طبقات كحلي/فحمي عميق مريح للعين مع حدود ناعمة واضحة */
+[data-theme="dark"] {
+  --bg: #12151c;             /* كحلي فحمي عميق */
+  --surface: #1a1f29;         /* البطاقات أفتح قليلًا */
+  --surface-2: #222836;
+  --surface-3: #2b3240;
+  --text: #e9edf4;
+  --text-muted: #9aa5b8;
+  --border: #2d3442;
+  --border-strong: #3d4657;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 2px 10px rgba(0, 0, 0, .25);
+  --shadow-lg: 0 10px 34px rgba(0, 0, 0, .5);
+
+  --ok: #4ade80;
+  --ok-bg: #16281f;
+  --ok-border: #2c6b45;
+
+  --danger: #f87171;
+  --danger-bg: #2c1a1a;
+  --danger-border: #7a3a37;
+
+  --warn: #f0b74e;
+  --warn-bg: #2c2415;
+  --warn-border: #7a5f2a;
+
+  --pressure: #fb923c;
+  --pressure-bg: #2d1e14;
+  --pressure-border: #7d4a26;
+
+  --info: #60b8dd;
+  --info-bg: #14252e;
+  --info-border: #2f5d73;
+
+  --accent: var(--color-gold-light);
+  --accent-dark: var(--color-gold);
+  --accent-soft: #2a2417;
+  --accent-contrast: #16130d;
+}

@@ -1,0 +1,110 @@
+/* ============================================================================
+   التجاوب: موبايل 360/390، تابلت 768، لابتوب، وشاشات الكول سنتر الكبيرة
+   ============================================================================ */
+
+/* --- شاشات كبيرة جدًا (شاشة الكول سنتر) --- */
+@media (min-width: 1500px) {
+  .products-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+}
+
+/* --- لابتوب صغير --- */
+@media (max-width: 1100px) {
+  .products-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+}
+
+/* --- تابلت (عمودان) --- */
+@media (max-width: 900px) {
+  .app-main { padding: var(--space-4); }
+  .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .department-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #header-clock { display: none; } /* لا مساحة كافية للساعة */
+}
+
+/* --- موبايل (عمود واحد) --- */
+@media (max-width: 680px) {
+  :root { --header-height: 56px; }
+
+  /* ---- ترويسة الموبايل: صف واحد مرتب، بلا تشوه، بلا ازدحام ---- */
+  .app-header { padding: var(--space-2) var(--space-3); gap: var(--space-2); }
+  .app-header__brand { gap: var(--space-2); flex: 1 1 auto; }
+  .app-header__logo { width: 34px; height: 34px; flex-basis: 34px; padding: 2px; }
+  /* اسم الحلواني يبقى واضحًا دائمًا ولا يُقص */
+  .app-header__title { font-size: .95rem; overflow: visible; text-overflow: clip; }
+  .app-header__title .brand-ar { white-space: nowrap; }
+  .app-header__title .brand-en { display: none; }   /* الاختصار على الاسم العربي */
+  .app-header__subtitle { font-size: .64rem; }
+  .app-header__meta { gap: var(--space-1); flex: 0 0 auto; }
+  .icon-btn { width: 36px; height: 36px; }
+
+  /* كل الأزرار تنتقل إلى قائمة "المزيد" — لا تختفي أي وظيفة */
+  .app-header__actions .header-action { display: none; }
+  #more-btn { display: flex; }
+
+  /* في الترويسة فقط: نص حالة الاتصال يُختصر لنقطة ملونة توفيرًا للمساحة */
+  .app-header .conn-badge { padding: 5px; }
+  .app-header .conn-badge .conn-text { display: none; }
+  /* داخل رأس القسم يبقى النص ظاهرًا لأن المساحة تكفي */
+
+  /* رسالة الترحيب والدليل على الموبايل */
+  .welcome__logo { width: 64px; height: 64px; }
+  .welcome__title { font-size: 1.08rem; }
+  .welcome__body p { font-size: .9rem; line-height: 2; text-align: right; }
+  .guide__section { padding: var(--space-3); }
+  .guide__list { padding-right: var(--space-4); }
+
+  .app-main { padding: var(--space-3); }
+  .products-grid { grid-template-columns: 1fr; }
+  .product-card { min-height: 0; }
+  .department-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2); }
+  .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .view-header { flex-direction: column; align-items: stretch; }
+  .view-title { font-size: 1.1rem; }
+  .search-box { max-width: 100%; }
+
+  .dept-header { padding: var(--space-3); }
+  .dept-header__tools { width: 100%; }
+  .mode-switch { flex: 1; }
+  .mode-switch button { flex: 1; }
+
+  .modal-box { padding: var(--space-4); max-height: 86vh; }
+  .modal-actions { flex-direction: column-reverse; }
+  .modal-actions .btn { width: 100%; }
+
+  /* الإشعارات بعرض الشاشة ولا تغطي أزرارًا مهمة */
+  .toast-stack {
+    left: var(--space-3); right: var(--space-3); bottom: var(--space-3);
+    max-width: none;
+  }
+
+  .chat-window { height: 200px; }
+  .chat-bubble { max-width: 85%; }
+
+  .item-row { padding: var(--space-3); gap: var(--space-2); }
+  .item-row__chevron { display: none; }
+  .popular-block { padding: var(--space-3); }
+
+  .tabs { flex-wrap: wrap; }
+  .tab-btn { padding: 8px var(--space-3); font-size: .8rem; flex: 1 1 auto; text-align: center; }
+
+  .duration-picker { gap: var(--space-2); }
+  .duration-value { font-size: 1.3rem; min-width: 40px; }
+}
+
+/* --- موبايل صغير جدًا 360px --- */
+@media (max-width: 400px) {
+  /* اسم "الحلواني" يبقى ظاهرًا؛ نخفي العنوان الفرعي فقط لتوفير المساحة */
+  .app-header__subtitle { display: none; }
+  .app-header__title { font-size: .92rem; }
+  .header-menu { min-width: 190px; }
+  .stat-grid { grid-template-columns: 1fr; }
+  .status-choice { font-size: .7rem; padding: 6px 2px; }
+  .duration-unit { padding: var(--space-2); }
+  .duration-step { width: 30px; height: 30px; }
+}
+
+/* احترام تفضيل تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
