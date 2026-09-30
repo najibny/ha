@@ -1,0 +1,78 @@
+/* ============================================================================
+   متغيرات التصميم — الألوان مستخرجة من شعار الحلواني (ذهبي دافئ على خلفية كريمية)
+   لتغيير الهوية البصرية لاحقًا، عدّل القيم هنا فقط ولن تحتاج لمس بقية الملفات
+   ============================================================================ */
+:root {
+  /* --- الألوان الأساسية من الشعار --- */
+  --color-gold: #c69a3f;
+  --color-gold-dark: #a17c2c;
+  --color-gold-light: #e6c97a;
+  --color-ink: #241f18;
+  --color-ring: #8b8f98;
+
+  /* --- وضع فاتح (Light Mode) --- */
+  --bg: #faf7f0;
+  --surface: #ffffff;
+  --surface-2: #f4efe2;
+  --text: #241f18;
+  --text-muted: #6b6255;
+  --border: #e7ddc4;
+  --shadow: 0 2px 10px rgba(36, 31, 24, 0.06);
+  --shadow-lg: 0 10px 30px rgba(36, 31, 24, 0.12);
+
+  /* --- ألوان الحالة (لا تعتمد فقط على اللون، دائمًا مع نص وأيقونة) --- */
+  --status-available: #1f8a4c;
+  --status-available-bg: #e6f5ec;
+  --status-out: #c0392b;
+  --status-out-bg: #fbe9e7;
+  --status-soon: #b3720c;
+  --status-soon-bg: #fdf1d8;
+  --status-pressure: #b3540c;
+  --status-pressure-bg: #fdece0;
+
+  --accent: var(--color-gold);
+  --accent-dark: var(--color-gold-dark);
+  --accent-contrast: #ffffff;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+
+  --font-arabic: 'Cairo', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  --header-height: 64px;
+  --transition: 160ms ease;
+}
+
+[data-theme="dark"] {
+  --bg: #17140f;
+  --surface: #211c15;
+  --surface-2: #2a241b;
+  --text: #f1ead9;
+  --text-muted: #b6ab94;
+  --border: #3a3223;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+  --status-available: #4fd18a;
+  --status-available-bg: #17301f;
+  --status-out: #ef7266;
+  --status-out-bg: #3a1a16;
+  --status-soon: #f0b23f;
+  --status-soon-bg: #3a2a0c;
+  --status-pressure: #f39a55;
+  --status-pressure-bg: #3a2413;
+
+  --accent: var(--color-gold-light);
+  --accent-dark: var(--color-gold);
+  --accent-contrast: #17140f;
+}

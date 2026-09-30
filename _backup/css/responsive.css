@@ -1,0 +1,46 @@
+/* ============================================================================
+   التجاوب مع أحجام الشاشات: هاتف، تابلت، لابتوب، شاشات الكول سنتر الكبيرة
+   ============================================================================ */
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+
+/* --- شاشات كبيرة (كول سنتر / ديسكتوب واسع) --- */
+@media (min-width: 1400px) {
+  .products-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+}
+
+/* --- تابلت --- */
+@media (max-width: 900px) {
+  .app-main { padding: var(--space-4); }
+  .department-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* --- هاتف --- */
+@media (max-width: 600px) {
+  .app-header { padding: 0 var(--space-3); }
+  .app-header__title { display: none; }
+  .app-main { padding: var(--space-3); }
+  .department-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
+  .login-title { font-size: 1.3rem; }
+  .products-grid { grid-template-columns: 1fr; }
+  .view-header { flex-direction: column; align-items: stretch; }
+  .search-box { max-width: 100%; }
+  .modal-box { padding: var(--space-4); }
+  .status-choice-group { grid-template-columns: repeat(3, 1fr); }
+  .stat-grid { grid-template-columns: 1fr 1fr; }
+  .pin-panel { padding: var(--space-4); }
+}
+
+@media (max-width: 380px) {
+  .department-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* احترام تفضيل تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
